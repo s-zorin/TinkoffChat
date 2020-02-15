@@ -66,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Lifecycle Events
     
-    lazy var logger = LifecycleEventLogger()
+    lazy var logger = LifecycleEventLogger(entityName: "Application")
     
     func applicationWillResignActive(_ application: UIApplication) {
         logger.logEvent(#function)

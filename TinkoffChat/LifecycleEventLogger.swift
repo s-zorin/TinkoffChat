@@ -9,13 +9,18 @@
 import Foundation
 
 class LifecycleEventLogger {
+    private var entityName: String
     private var currentStateName: String?
+    
+    init(entityName: String) {
+        self.entityName = entityName
+    }
     
     func logEvent(_ stateName: String) {
         if currentStateName == nil {
-            print("Application moved to \(stateName)")
+            print("\(entityName) moved to \(stateName)")
         } else {
-            print("Application moved from \(currentStateName!) to \(stateName)")
+            print("\(entityName) moved from \(currentStateName!) to \(stateName)")
         }
         currentStateName = stateName
     }

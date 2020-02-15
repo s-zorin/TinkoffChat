@@ -14,6 +14,7 @@
 		D0E5468323F8078E0058732D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0E5468223F8078E0058732D /* Assets.xcassets */; };
 		D0E5468623F8078E0058732D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E5468423F8078E0058732D /* LaunchScreen.storyboard */; };
 		D0E5469123F8078F0058732D /* TinkoffChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5469023F8078F0058732D /* TinkoffChatTests.swift */; };
+		D0E5469E23F84BD20058732D /* LifecycleEventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5469D23F84BD20058732D /* LifecycleEventLogger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		D0E5468C23F8078F0058732D /* TinkoffChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinkoffChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E5469023F8078F0058732D /* TinkoffChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinkoffChatTests.swift; sourceTree = "<group>"; };
 		D0E5469223F8078F0058732D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0E5469D23F84BD20058732D /* LifecycleEventLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifecycleEventLogger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				D0E5468423F8078E0058732D /* LaunchScreen.storyboard */,
 				D0E5468723F8078E0058732D /* Info.plist */,
 				D0E5467F23F8078E0058732D /* TinkoffChat.xcdatamodeld */,
+				D0E5469D23F84BD20058732D /* LifecycleEventLogger.swift */,
 			);
 			path = TinkoffChat;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				D0E5467B23F8078E0058732D /* ViewController.swift in Sources */,
 				D0E5468123F8078E0058732D /* TinkoffChat.xcdatamodeld in Sources */,
 				D0E5467723F8078E0058732D /* AppDelegate.swift in Sources */,
+				D0E5469E23F84BD20058732D /* LifecycleEventLogger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

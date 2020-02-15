@@ -64,5 +64,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    // MARK: - Lifecycle Events
+    
+    lazy var logger = LifecycleEventLogger()
+    
+    func applicationWillResignActive(_ application: UIApplication) {
+        logger.logEvent(#function)
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        logger.logEvent(#function)
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        logger.logEvent(#function)
+    }
+    
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        logger.logEvent(#function)
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        logger.logEvent(#function)
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        logger.logEvent(#function)
+    }
 }
-

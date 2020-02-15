@@ -17,11 +17,13 @@ class LifecycleEventLogger {
     }
     
     func logEvent(_ stateName: String) {
+        #if LOGS
         if currentStateName == nil {
             print("\(entityName) moved to \(stateName)")
         } else {
             print("\(entityName) moved from \(currentStateName!) to \(stateName)")
         }
         currentStateName = stateName
+        #endif
     }
 }

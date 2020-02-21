@@ -26,6 +26,7 @@
 		D0E546DA23FFF8770058732D /* StoryboardControllerID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E546D923FFF8770058732D /* StoryboardControllerID.swift */; };
 		D0E546DC23FFFCC60058732D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E546DB23FFFCC60058732D /* Extensions.swift */; };
 		D0E546DE23FFFD620058732D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E546D323FED3830058732D /* ProfileViewController.swift */; };
+		D0F0417424000792000E71F3 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0417324000792000E71F3 /* RoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		D0E546D323FED3830058732D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D0E546D923FFF8770058732D /* StoryboardControllerID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardControllerID.swift; sourceTree = "<group>"; };
 		D0E546DB23FFFCC60058732D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D0F0417324000792000E71F3 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		D0E5467523F8078E0058732D /* TinkoffChat */ = {
 			isa = PBXGroup;
 			children = (
+				D0F0417224000732000E71F3 /* Controls */,
 				D0E546DF23FFFD910058732D /* Navigation */,
 				D0E546DD23FFFD520058732D /* Controllers */,
 				D0E5467623F8078E0058732D /* AppDelegate.swift */,
@@ -144,6 +147,14 @@
 				D0E546D923FFF8770058732D /* StoryboardControllerID.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		D0F0417224000732000E71F3 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				D0F0417324000792000E71F3 /* RoundedButton.swift */,
+			);
+			path = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +289,7 @@
 				D0E5467B23F8078E0058732D /* ViewController.swift in Sources */,
 				D0E5468123F8078E0058732D /* TinkoffChat.xcdatamodeld in Sources */,
 				D0E546DC23FFFCC60058732D /* Extensions.swift in Sources */,
+				D0F0417424000792000E71F3 /* RoundedButton.swift in Sources */,
 				D0E546D423FED3830058732D /* ProfileViewController.swift in Sources */,
 				D0E546DA23FFF8770058732D /* StoryboardControllerID.swift in Sources */,
 				D0E5467723F8078E0058732D /* AppDelegate.swift in Sources */,

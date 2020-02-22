@@ -10,9 +10,22 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    // MARK: - Outlets
+    
+    @IBOutlet private var profileImage: UIImageView!
+    @IBOutlet private var selectImageButton: UIButton!
+    
     // MARK: - Actions
     
-    @IBAction func navigateBack(_ sender: UIButton) {
+    @IBAction private func navigateBack(_ sender: UIButton) {
         navigationController?.navigateBack()
+    }
+    
+    // MARK: - Overrides
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        profileImage.layer.cornerRadius = 48
+        selectImageButton.layer.cornerRadius = 48
     }
 }

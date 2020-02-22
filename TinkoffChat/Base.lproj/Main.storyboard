@@ -18,9 +18,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZl-2G-tbu" userLabel="Profile Button" customClass="RoundedButton" customModule="TinkoffChat" customModuleProvider="target">
                                 <rect key="frame" x="16" y="816" width="382" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="999" constant="480" id="lbv-ps-GRd"/>
-                                </constraints>
                                 <state key="normal" title="Профиль"/>
                                 <connections>
                                     <action selector="navigateToProfile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DkR-rb-5GV"/>
@@ -31,9 +28,8 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dZl-2G-tbu" secondAttribute="bottom" constant="16" id="3Ac-AR-OlU"/>
-                            <constraint firstItem="dZl-2G-tbu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="a4v-sq-PFQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dZl-2G-tbu" secondAttribute="trailing" constant="16" id="hVV-cF-W8H"/>
-                            <constraint firstItem="dZl-2G-tbu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mkF-Ck-CCo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dZl-2G-tbu" secondAttribute="trailing" constant="16" id="hVV-cF-W8H"/>
+                            <constraint firstItem="dZl-2G-tbu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mkF-Ck-CCo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -51,27 +47,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-user" translatesAutoresizingMaskIntoConstraints="NO" id="YWf-A8-wBv" userLabel="Profile Image">
+                                <rect key="frame" x="16" y="60" width="382" height="382"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YWf-A8-wBv" secondAttribute="height" multiplier="1:1" id="1WA-l1-mAU"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCf-Zj-ZDr" userLabel="Select Image Button">
+                                <rect key="frame" x="302" y="346" width="96" height="96"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="PhV-Q5-5Hx"/>
+                                    <constraint firstAttribute="width" constant="96" id="qW5-Hl-RE8"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="24" minY="24" maxX="24" maxY="24"/>
+                                <state key="normal" image="slr-camera-2-xxl"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Александр Федоров" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8c5-oX-Bnr" userLabel="Name Label">
+                                <rect key="frame" x="16" y="450" width="382" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ua-7M-EdK" userLabel="Edit Button" customClass="RoundedButton" customModule="TinkoffChat" customModuleProvider="target">
+                                <rect key="frame" x="16" y="778" width="382" height="30"/>
+                                <state key="normal" title="Редактировать"/>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOD-u3-r53" userLabel="Back Button" customClass="RoundedButton" customModule="TinkoffChat" customModuleProvider="target">
                                 <rect key="frame" x="16" y="816" width="382" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="999" constant="480" id="H20-ox-MOy"/>
-                                </constraints>
                                 <state key="normal" title="Назад"/>
                                 <connections>
                                     <action selector="navigateBack:" destination="7lL-JG-dEo" eventType="touchUpInside" id="umU-8i-jan"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="IdX-DK-og3" userLabel="Bio Stack View">
+                                <rect key="frame" x="16" y="501" width="382" height="69"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1️⃣ Люблю программировать под iOS " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxu-jp-Is0">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2️⃣ Изучать новые технологии" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afz-Du-gP0">
+                                        <rect key="frame" x="0.0" y="24.333333333333371" width="382" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3️⃣ Помогаю развиваться другим" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgg-T2-5sB">
+                                        <rect key="frame" x="0.0" y="48.666666666666629" width="382" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="qOD-u3-r53" firstAttribute="centerX" secondItem="drk-LJ-UU5" secondAttribute="centerX" id="ARL-3v-0mf"/>
-                            <constraint firstItem="qOD-u3-r53" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="drk-LJ-UU5" secondAttribute="leading" constant="16" id="Vfk-kx-SB6"/>
-                            <constraint firstItem="drk-LJ-UU5" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qOD-u3-r53" secondAttribute="trailing" constant="16" id="i9r-b5-jap"/>
-                            <constraint firstItem="drk-LJ-UU5" firstAttribute="bottom" secondItem="qOD-u3-r53" secondAttribute="bottom" constant="16" id="opQ-2m-u1z"/>
+                            <constraint firstItem="YWf-A8-wBv" firstAttribute="leading" secondItem="drk-LJ-UU5" secondAttribute="leading" constant="16" id="1sg-kA-Lgp" userLabel="Profile Image"/>
+                            <constraint firstItem="IdX-DK-og3" firstAttribute="leading" secondItem="drk-LJ-UU5" secondAttribute="leading" constant="16" id="3u8-a1-WoQ" userLabel="Bio Stack View"/>
+                            <constraint firstItem="drk-LJ-UU5" firstAttribute="trailing" secondItem="IdX-DK-og3" secondAttribute="trailing" constant="16" id="4PW-fX-PQ5" userLabel="Bio Stack View"/>
+                            <constraint firstItem="IdX-DK-og3" firstAttribute="top" secondItem="8c5-oX-Bnr" secondAttribute="bottom" constant="8" id="56k-O8-xi0" userLabel="Bio Stack View"/>
+                            <constraint firstItem="8c5-oX-Bnr" firstAttribute="top" secondItem="YWf-A8-wBv" secondAttribute="bottom" constant="8" id="8hb-7p-AOI" userLabel="Name Label"/>
+                            <constraint firstItem="8c5-oX-Bnr" firstAttribute="leading" secondItem="drk-LJ-UU5" secondAttribute="leading" constant="16" id="ERN-mu-W90" userLabel="Name Label"/>
+                            <constraint firstItem="hCf-Zj-ZDr" firstAttribute="bottom" secondItem="YWf-A8-wBv" secondAttribute="bottom" id="JGp-JL-nLo" userLabel="Select Image Button"/>
+                            <constraint firstItem="hCf-Zj-ZDr" firstAttribute="trailing" secondItem="YWf-A8-wBv" secondAttribute="trailing" id="NTW-in-WGP" userLabel="Select Image Button"/>
+                            <constraint firstItem="qOD-u3-r53" firstAttribute="top" secondItem="6ua-7M-EdK" secondAttribute="bottom" constant="8" id="SRM-Bv-bxc" userLabel="Edit Button"/>
+                            <constraint firstItem="YWf-A8-wBv" firstAttribute="top" secondItem="drk-LJ-UU5" secondAttribute="top" constant="16" id="UWy-eH-FR5" userLabel="Profile Image"/>
+                            <constraint firstItem="qOD-u3-r53" firstAttribute="leading" secondItem="drk-LJ-UU5" secondAttribute="leading" constant="16" id="Vfk-kx-SB6" userLabel="Back Button"/>
+                            <constraint firstItem="drk-LJ-UU5" firstAttribute="trailing" secondItem="YWf-A8-wBv" secondAttribute="trailing" constant="16" id="Ygd-wZ-ILK" userLabel="Profile Image"/>
+                            <constraint firstItem="drk-LJ-UU5" firstAttribute="trailing" secondItem="qOD-u3-r53" secondAttribute="trailing" constant="16" id="i9r-b5-jap" userLabel="Back Button"/>
+                            <constraint firstItem="qOD-u3-r53" firstAttribute="trailing" secondItem="6ua-7M-EdK" secondAttribute="trailing" id="j2u-PK-3G2" userLabel="Edit Button"/>
+                            <constraint firstItem="qOD-u3-r53" firstAttribute="leading" secondItem="6ua-7M-EdK" secondAttribute="leading" id="nDs-Re-TA3" userLabel="Edit Button"/>
+                            <constraint firstItem="drk-LJ-UU5" firstAttribute="bottom" secondItem="qOD-u3-r53" secondAttribute="bottom" constant="16" id="opQ-2m-u1z" userLabel="Back Button"/>
+                            <constraint firstItem="drk-LJ-UU5" firstAttribute="trailing" secondItem="8c5-oX-Bnr" secondAttribute="trailing" constant="16" id="pUJ-RP-DYI" userLabel="Name Label"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="drk-LJ-UU5"/>
                     </view>
                     <navigationItem key="navigationItem" id="CF8-0J-rJt"/>
+                    <connections>
+                        <outlet property="profileImage" destination="YWf-A8-wBv" id="Jol-ku-qfJ"/>
+                        <outlet property="selectImageButton" destination="hCf-Zj-ZDr" id="yy9-po-mWq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="quD-Sf-Uy7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,4 +154,8 @@
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="placeholder-user" width="600" height="600"/>
+        <image name="slr-camera-2-xxl" width="256" height="256"/>
+    </resources>
 </document>

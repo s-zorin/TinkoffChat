@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     // MARK: - Actions
     
-    @IBAction func navigateToProfile(_ sender: UIButton) {
+    @IBAction private func navigateToProfile(_ sender: UIButton) {
         navigationController?.navigate(to: .ProfileViewController)
     }
     

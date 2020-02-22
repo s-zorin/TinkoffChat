@@ -50,6 +50,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ua-7M-EdK" userLabel="Edit Button" customClass="RoundedButton" customModule="TinkoffChat" customModuleProvider="target">
                                 <rect key="frame" x="16" y="778" width="382" height="30"/>
                                 <state key="normal" title="Редактировать"/>
+                                <connections>
+                                    <action selector="navigateBack:" destination="7lL-JG-dEo" eventType="touchUpInside" id="iQH-dH-MiU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOD-u3-r53" userLabel="Back Button" customClass="RoundedButton" customModule="TinkoffChat" customModuleProvider="target">
                                 <rect key="frame" x="16" y="816" width="382" height="30"/>
@@ -156,6 +159,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="CF8-0J-rJt"/>
                     <connections>
+                        <outlet property="editButton" destination="6ua-7M-EdK" id="5mA-PV-qiY"/>
                         <outlet property="pickImageButton" destination="hCf-Zj-ZDr" id="FfR-JJ-LIR"/>
                         <outlet property="profileImage" destination="YWf-A8-wBv" id="Jol-ku-qfJ"/>
                     </connections>

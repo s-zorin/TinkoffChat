@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uuW-4y-QtL">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +11,183 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TinkoffChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZl-2G-tbu" userLabel="Profile Button" customClass="RoundedButton" customModule="TinkoffChat" customModuleProvider="target">
+                                <rect key="frame" x="16" y="816" width="382" height="30"/>
+                                <state key="normal" title="Профиль"/>
+                                <connections>
+                                    <action selector="navigateToProfile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DkR-rb-5GV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dZl-2G-tbu" secondAttribute="bottom" constant="16" id="3Ac-AR-OlU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dZl-2G-tbu" secondAttribute="trailing" constant="16" id="hVV-cF-W8H"/>
+                            <constraint firstItem="dZl-2G-tbu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mkF-Ck-CCo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="97D-zH-nNL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="fQW-w3-NKP">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="7lL-JG-dEo" customClass="ProfileViewController" customModule="TinkoffChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="28s-DB-RJV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ua-7M-EdK" userLabel="Edit Button" customClass="RoundedButton" customModule="TinkoffChat" customModuleProvider="target">
+                                <rect key="frame" x="16" y="778" width="382" height="30"/>
+                                <state key="normal" title="Редактировать"/>
+                                <connections>
+                                    <action selector="navigateBack:" destination="7lL-JG-dEo" eventType="touchUpInside" id="iQH-dH-MiU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOD-u3-r53" userLabel="Back Button" customClass="RoundedButton" customModule="TinkoffChat" customModuleProvider="target">
+                                <rect key="frame" x="16" y="816" width="382" height="30"/>
+                                <state key="normal" title="Назад"/>
+                                <connections>
+                                    <action selector="navigateBack:" destination="7lL-JG-dEo" eventType="touchUpInside" id="umU-8i-jan"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihm-Fs-qso">
+                                <rect key="frame" x="0.0" y="44" width="414" height="718"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDD-dN-O7V" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="526"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-user" translatesAutoresizingMaskIntoConstraints="NO" id="YWf-A8-wBv" userLabel="Profile Image">
+                                                <rect key="frame" x="16" y="16" width="382" height="382"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="YWf-A8-wBv" secondAttribute="height" multiplier="1:1" id="1WA-l1-mAU"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCf-Zj-ZDr" userLabel="Pick Image Button">
+                                                <rect key="frame" x="302" y="302" width="96" height="96"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="96" id="PhV-Q5-5Hx"/>
+                                                    <constraint firstAttribute="width" constant="96" id="qW5-Hl-RE8"/>
+                                                </constraints>
+                                                <inset key="contentEdgeInsets" minX="24" minY="24" maxX="24" maxY="24"/>
+                                                <state key="normal" image="slr-camera-2-xxl"/>
+                                                <connections>
+                                                    <action selector="pickImage:" destination="7lL-JG-dEo" eventType="touchUpInside" id="F6K-kY-wyM"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Александр Федоров" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8c5-oX-Bnr" userLabel="Name Label">
+                                                <rect key="frame" x="16" y="406" width="382" height="43"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="IdX-DK-og3" userLabel="Bio Stack View">
+                                                <rect key="frame" x="16" y="457" width="382" height="69"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1️⃣ Люблю программировать под iOS " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxu-jp-Is0" userLabel="Bio Line 1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2️⃣ Изучать новые технологии" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afz-Du-gP0" userLabel="Bio Line 2">
+                                                        <rect key="frame" x="0.0" y="24.333333333333371" width="382" height="20.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3️⃣ Помогаю развиваться другим" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgg-T2-5sB" userLabel="Bio Line 3">
+                                                        <rect key="frame" x="0.0" y="48.666666666666629" width="382" height="20.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="8c5-oX-Bnr" firstAttribute="top" secondItem="YWf-A8-wBv" secondAttribute="bottom" constant="8" id="3l7-SY-2Jo" userLabel="Name Label"/>
+                                            <constraint firstItem="YWf-A8-wBv" firstAttribute="leading" secondItem="BDD-dN-O7V" secondAttribute="leading" constant="16" id="7sE-zd-MSe" userLabel="Profile Image"/>
+                                            <constraint firstAttribute="trailing" secondItem="8c5-oX-Bnr" secondAttribute="trailing" constant="16" id="CF7-js-AiC" userLabel="Name Label"/>
+                                            <constraint firstItem="hCf-Zj-ZDr" firstAttribute="trailing" secondItem="YWf-A8-wBv" secondAttribute="trailing" id="Hs4-gX-TpZ" userLabel="Pick Image Button"/>
+                                            <constraint firstAttribute="trailing" secondItem="YWf-A8-wBv" secondAttribute="trailing" constant="16" id="RTf-n2-MBp" userLabel="Profile Image"/>
+                                            <constraint firstItem="hCf-Zj-ZDr" firstAttribute="bottom" secondItem="YWf-A8-wBv" secondAttribute="bottom" id="eOr-Go-9kw" userLabel="Pick Image Button"/>
+                                            <constraint firstAttribute="trailing" secondItem="IdX-DK-og3" secondAttribute="trailing" constant="16" id="es7-mM-KNQ" userLabel="Bio Stack View"/>
+                                            <constraint firstItem="YWf-A8-wBv" firstAttribute="top" secondItem="BDD-dN-O7V" secondAttribute="top" constant="16" id="jZu-nh-RH5" userLabel="Profile Image"/>
+                                            <constraint firstItem="IdX-DK-og3" firstAttribute="leading" secondItem="BDD-dN-O7V" secondAttribute="leading" constant="16" id="ryk-Ut-GpW" userLabel="Bio Stack View"/>
+                                            <constraint firstAttribute="bottom" secondItem="IdX-DK-og3" secondAttribute="bottom" id="trU-vG-ZH8" userLabel="Bio Stack View"/>
+                                            <constraint firstItem="8c5-oX-Bnr" firstAttribute="leading" secondItem="BDD-dN-O7V" secondAttribute="leading" constant="16" id="ul8-ea-7nz" userLabel="Name Label"/>
+                                            <constraint firstItem="IdX-DK-og3" firstAttribute="top" secondItem="8c5-oX-Bnr" secondAttribute="bottom" constant="8" id="wXK-7p-Qgb" userLabel="Bio Stack View"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="BDD-dN-O7V" secondAttribute="trailing" id="4kd-Ir-Qw0"/>
+                                    <constraint firstItem="BDD-dN-O7V" firstAttribute="top" secondItem="ihm-Fs-qso" secondAttribute="top" id="CDv-sO-OHO"/>
+                                    <constraint firstAttribute="bottom" secondItem="BDD-dN-O7V" secondAttribute="bottom" id="JSh-6B-vKm"/>
+                                    <constraint firstItem="BDD-dN-O7V" firstAttribute="width" secondItem="ihm-Fs-qso" secondAttribute="width" id="MG5-Ms-jG0"/>
+                                    <constraint firstItem="BDD-dN-O7V" firstAttribute="leading" secondItem="ihm-Fs-qso" secondAttribute="leading" id="TrA-jy-1bK"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6ua-7M-EdK" firstAttribute="top" secondItem="ihm-Fs-qso" secondAttribute="bottom" constant="16" id="3w8-Ge-nTj" userLabel="Scroll View"/>
+                            <constraint firstItem="ihm-Fs-qso" firstAttribute="top" secondItem="drk-LJ-UU5" secondAttribute="top" id="68K-Rv-2y4" userLabel="Scroll View"/>
+                            <constraint firstItem="qOD-u3-r53" firstAttribute="top" secondItem="6ua-7M-EdK" secondAttribute="bottom" constant="8" id="SRM-Bv-bxc" userLabel="Edit Button"/>
+                            <constraint firstItem="qOD-u3-r53" firstAttribute="leading" secondItem="drk-LJ-UU5" secondAttribute="leading" constant="16" id="Vfk-kx-SB6" userLabel="Back Button"/>
+                            <constraint firstItem="ihm-Fs-qso" firstAttribute="leading" secondItem="drk-LJ-UU5" secondAttribute="leading" id="dq3-U7-2JM" userLabel="Scroll View"/>
+                            <constraint firstItem="drk-LJ-UU5" firstAttribute="trailing" secondItem="qOD-u3-r53" secondAttribute="trailing" constant="16" id="i9r-b5-jap" userLabel="Back Button"/>
+                            <constraint firstItem="qOD-u3-r53" firstAttribute="trailing" secondItem="6ua-7M-EdK" secondAttribute="trailing" id="j2u-PK-3G2" userLabel="Edit Button"/>
+                            <constraint firstItem="ihm-Fs-qso" firstAttribute="trailing" secondItem="drk-LJ-UU5" secondAttribute="trailing" id="kOA-q8-cLX" userLabel="Scroll View"/>
+                            <constraint firstItem="qOD-u3-r53" firstAttribute="leading" secondItem="6ua-7M-EdK" secondAttribute="leading" id="nDs-Re-TA3" userLabel="Edit Button"/>
+                            <constraint firstItem="drk-LJ-UU5" firstAttribute="bottom" secondItem="qOD-u3-r53" secondAttribute="bottom" constant="16" id="opQ-2m-u1z" userLabel="Back Button"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="drk-LJ-UU5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CF8-0J-rJt"/>
+                    <connections>
+                        <outlet property="editButton" destination="6ua-7M-EdK" id="5mA-PV-qiY"/>
+                        <outlet property="pickImageButton" destination="hCf-Zj-ZDr" id="FfR-JJ-LIR"/>
+                        <outlet property="profileImage" destination="YWf-A8-wBv" id="Jol-ku-qfJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="quD-Sf-Uy7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1771.0144927536232" y="129.91071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ArT-lm-qMY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="uuW-4y-QtL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="19l-iR-8hf">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="l4a-0t-dzx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v5F-z3-IU8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="placeholder-user" width="600" height="600"/>
+        <image name="slr-camera-2-xxl" width="256" height="256"/>
+    </resources>
 </document>

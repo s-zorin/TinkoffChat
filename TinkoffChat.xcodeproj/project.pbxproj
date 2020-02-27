@@ -22,6 +22,11 @@
 		D0E546C723F85A5C0058732D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E5468423F8078E0058732D /* LaunchScreen.storyboard */; };
 		D0E546C823F85A5C0058732D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0E5468223F8078E0058732D /* Assets.xcassets */; };
 		D0E546C923F85A5C0058732D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E5467C23F8078E0058732D /* Main.storyboard */; };
+		D0E546D423FED3830058732D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E546D323FED3830058732D /* ProfileViewController.swift */; };
+		D0E546DA23FFF8770058732D /* StoryboardControllerID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E546D923FFF8770058732D /* StoryboardControllerID.swift */; };
+		D0E546DC23FFFCC60058732D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E546DB23FFFCC60058732D /* Extensions.swift */; };
+		D0E546DE23FFFD620058732D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E546D323FED3830058732D /* ProfileViewController.swift */; };
+		D0F0417424000792000E71F3 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0417324000792000E71F3 /* RoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,10 @@
 		D0E5469D23F84BD20058732D /* LifecycleEventLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifecycleEventLogger.swift; sourceTree = "<group>"; };
 		D0E546CD23F85A5C0058732D /* TinkoffChat Logs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TinkoffChat Logs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E546CE23F85A5C0058732D /* InfoLogs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = InfoLogs.plist; sourceTree = "<group>"; };
+		D0E546D323FED3830058732D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D0E546D923FFF8770058732D /* StoryboardControllerID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardControllerID.swift; sourceTree = "<group>"; };
+		D0E546DB23FFFCC60058732D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D0F0417324000792000E71F3 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +107,10 @@
 		D0E5467523F8078E0058732D /* TinkoffChat */ = {
 			isa = PBXGroup;
 			children = (
+				D0F0417224000732000E71F3 /* Controls */,
+				D0E546DF23FFFD910058732D /* Navigation */,
+				D0E546DD23FFFD520058732D /* Controllers */,
 				D0E5467623F8078E0058732D /* AppDelegate.swift */,
-				D0E5467A23F8078E0058732D /* ViewController.swift */,
 				D0E5467C23F8078E0058732D /* Main.storyboard */,
 				D0E5468223F8078E0058732D /* Assets.xcassets */,
 				D0E5468423F8078E0058732D /* LaunchScreen.storyboard */,
@@ -118,6 +129,32 @@
 				D0E5469223F8078F0058732D /* Info.plist */,
 			);
 			path = TinkoffChatTests;
+			sourceTree = "<group>";
+		};
+		D0E546DD23FFFD520058732D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0E5467A23F8078E0058732D /* ViewController.swift */,
+				D0E546D323FED3830058732D /* ProfileViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D0E546DF23FFFD910058732D /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D0E546DB23FFFCC60058732D /* Extensions.swift */,
+				D0E546D923FFF8770058732D /* StoryboardControllerID.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		D0F0417224000732000E71F3 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				D0F0417324000792000E71F3 /* RoundedButton.swift */,
+			);
+			path = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +288,10 @@
 			files = (
 				D0E5467B23F8078E0058732D /* ViewController.swift in Sources */,
 				D0E5468123F8078E0058732D /* TinkoffChat.xcdatamodeld in Sources */,
+				D0E546DC23FFFCC60058732D /* Extensions.swift in Sources */,
+				D0F0417424000792000E71F3 /* RoundedButton.swift in Sources */,
+				D0E546D423FED3830058732D /* ProfileViewController.swift in Sources */,
+				D0E546DA23FFF8770058732D /* StoryboardControllerID.swift in Sources */,
 				D0E5467723F8078E0058732D /* AppDelegate.swift in Sources */,
 				D0E5469E23F84BD20058732D /* LifecycleEventLogger.swift in Sources */,
 			);
@@ -270,6 +311,7 @@
 			files = (
 				D0E546C123F85A5C0058732D /* ViewController.swift in Sources */,
 				D0E546C223F85A5C0058732D /* TinkoffChat.xcdatamodeld in Sources */,
+				D0E546DE23FFFD620058732D /* ProfileViewController.swift in Sources */,
 				D0E546C323F85A5C0058732D /* AppDelegate.swift in Sources */,
 				D0E546C423F85A5C0058732D /* LifecycleEventLogger.swift in Sources */,
 			);

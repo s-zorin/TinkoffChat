@@ -9,7 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    // MARK: - Actions
+    
+    @IBAction private func navigateToProfile(_ sender: UIButton) {
+        navigationController?.navigate(to: .ProfileViewController)
+    }
+    
     // MARK: - Lifecycle Events
     
     lazy var logger = LifecycleEventLogger(entityName: "View")

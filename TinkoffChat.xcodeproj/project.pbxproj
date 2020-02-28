@@ -7,24 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0544BCA240800410030448B /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0544BC9240800410030448B /* ProfileViewController.xib */; };
 		D0E5467723F8078E0058732D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5467623F8078E0058732D /* AppDelegate.swift */; };
-		D0E5467B23F8078E0058732D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5467A23F8078E0058732D /* ViewController.swift */; };
-		D0E5467E23F8078E0058732D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E5467C23F8078E0058732D /* Main.storyboard */; };
 		D0E5468123F8078E0058732D /* TinkoffChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0E5467F23F8078E0058732D /* TinkoffChat.xcdatamodeld */; };
 		D0E5468323F8078E0058732D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0E5468223F8078E0058732D /* Assets.xcassets */; };
 		D0E5468623F8078E0058732D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E5468423F8078E0058732D /* LaunchScreen.storyboard */; };
 		D0E5469123F8078F0058732D /* TinkoffChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5469023F8078F0058732D /* TinkoffChatTests.swift */; };
-		D0E5469E23F84BD20058732D /* LifecycleEventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5469D23F84BD20058732D /* LifecycleEventLogger.swift */; };
-		D0E546C123F85A5C0058732D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5467A23F8078E0058732D /* ViewController.swift */; };
 		D0E546C223F85A5C0058732D /* TinkoffChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0E5467F23F8078E0058732D /* TinkoffChat.xcdatamodeld */; };
 		D0E546C323F85A5C0058732D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5467623F8078E0058732D /* AppDelegate.swift */; };
-		D0E546C423F85A5C0058732D /* LifecycleEventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5469D23F84BD20058732D /* LifecycleEventLogger.swift */; };
 		D0E546C723F85A5C0058732D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E5468423F8078E0058732D /* LaunchScreen.storyboard */; };
 		D0E546C823F85A5C0058732D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0E5468223F8078E0058732D /* Assets.xcassets */; };
-		D0E546C923F85A5C0058732D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E5467C23F8078E0058732D /* Main.storyboard */; };
 		D0E546D423FED3830058732D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E546D323FED3830058732D /* ProfileViewController.swift */; };
-		D0E546DA23FFF8770058732D /* StoryboardControllerID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E546D923FFF8770058732D /* StoryboardControllerID.swift */; };
-		D0E546DC23FFFCC60058732D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E546DB23FFFCC60058732D /* Extensions.swift */; };
 		D0E546DE23FFFD620058732D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E546D323FED3830058732D /* ProfileViewController.swift */; };
 		D0F0417424000792000E71F3 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0417324000792000E71F3 /* RoundedButton.swift */; };
 /* End PBXBuildFile section */
@@ -40,10 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D0544BC9240800410030448B /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		D0E5467323F8078E0058732D /* TinkoffChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E5467623F8078E0058732D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D0E5467A23F8078E0058732D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D0E5467D23F8078E0058732D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0E5468023F8078E0058732D /* TinkoffChat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TinkoffChat.xcdatamodel; sourceTree = "<group>"; };
 		D0E5468223F8078E0058732D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0E5468523F8078E0058732D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,12 +43,9 @@
 		D0E5468C23F8078F0058732D /* TinkoffChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinkoffChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E5469023F8078F0058732D /* TinkoffChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinkoffChatTests.swift; sourceTree = "<group>"; };
 		D0E5469223F8078F0058732D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0E5469D23F84BD20058732D /* LifecycleEventLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifecycleEventLogger.swift; sourceTree = "<group>"; };
 		D0E546CD23F85A5C0058732D /* TinkoffChat Logs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TinkoffChat Logs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E546CE23F85A5C0058732D /* InfoLogs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = InfoLogs.plist; sourceTree = "<group>"; };
 		D0E546D323FED3830058732D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		D0E546D923FFF8770058732D /* StoryboardControllerID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardControllerID.swift; sourceTree = "<group>"; };
-		D0E546DB23FFFCC60058732D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D0F0417324000792000E71F3 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,16 +97,13 @@
 			isa = PBXGroup;
 			children = (
 				D0F0417224000732000E71F3 /* Controls */,
-				D0E546DF23FFFD910058732D /* Navigation */,
 				D0E546DD23FFFD520058732D /* Controllers */,
 				D0E5467623F8078E0058732D /* AppDelegate.swift */,
-				D0E5467C23F8078E0058732D /* Main.storyboard */,
 				D0E5468223F8078E0058732D /* Assets.xcassets */,
 				D0E5468423F8078E0058732D /* LaunchScreen.storyboard */,
 				D0E5468723F8078E0058732D /* Info.plist */,
 				D0E546CE23F85A5C0058732D /* InfoLogs.plist */,
 				D0E5467F23F8078E0058732D /* TinkoffChat.xcdatamodeld */,
-				D0E5469D23F84BD20058732D /* LifecycleEventLogger.swift */,
 			);
 			path = TinkoffChat;
 			sourceTree = "<group>";
@@ -134,19 +120,10 @@
 		D0E546DD23FFFD520058732D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D0E5467A23F8078E0058732D /* ViewController.swift */,
 				D0E546D323FED3830058732D /* ProfileViewController.swift */,
+				D0544BC9240800410030448B /* ProfileViewController.xib */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		D0E546DF23FFFD910058732D /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				D0E546DB23FFFCC60058732D /* Extensions.swift */,
-				D0E546D923FFF8770058732D /* StoryboardControllerID.swift */,
-			);
-			path = Navigation;
 			sourceTree = "<group>";
 		};
 		D0F0417224000732000E71F3 /* Controls */ = {
@@ -258,7 +235,7 @@
 			files = (
 				D0E5468623F8078E0058732D /* LaunchScreen.storyboard in Resources */,
 				D0E5468323F8078E0058732D /* Assets.xcassets in Resources */,
-				D0E5467E23F8078E0058732D /* Main.storyboard in Resources */,
+				D0544BCA240800410030448B /* ProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +252,6 @@
 			files = (
 				D0E546C723F85A5C0058732D /* LaunchScreen.storyboard in Resources */,
 				D0E546C823F85A5C0058732D /* Assets.xcassets in Resources */,
-				D0E546C923F85A5C0058732D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,14 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0E5467B23F8078E0058732D /* ViewController.swift in Sources */,
 				D0E5468123F8078E0058732D /* TinkoffChat.xcdatamodeld in Sources */,
-				D0E546DC23FFFCC60058732D /* Extensions.swift in Sources */,
 				D0F0417424000792000E71F3 /* RoundedButton.swift in Sources */,
 				D0E546D423FED3830058732D /* ProfileViewController.swift in Sources */,
-				D0E546DA23FFF8770058732D /* StoryboardControllerID.swift in Sources */,
 				D0E5467723F8078E0058732D /* AppDelegate.swift in Sources */,
-				D0E5469E23F84BD20058732D /* LifecycleEventLogger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,11 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0E546C123F85A5C0058732D /* ViewController.swift in Sources */,
 				D0E546C223F85A5C0058732D /* TinkoffChat.xcdatamodeld in Sources */,
 				D0E546DE23FFFD620058732D /* ProfileViewController.swift in Sources */,
 				D0E546C323F85A5C0058732D /* AppDelegate.swift in Sources */,
-				D0E546C423F85A5C0058732D /* LifecycleEventLogger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,14 +298,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D0E5467C23F8078E0058732D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D0E5467D23F8078E0058732D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D0E5468423F8078E0058732D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -14,40 +14,21 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBOutlet private var profileImage: UIImageView!
     @IBOutlet private var pickImageButton: UIButton!
-    @IBOutlet private var editButton: RoundedButton!
     
     // MARK: - Actions
-    
-    @IBAction private func navigateBack(_ sender: UIButton) {
-        navigationController?.navigateBack()
-    }
     
     @IBAction private func pickImage(_ sender: UIButton) {
         print("Pick profile image.")
         let controller = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let photoLibraryAction = UIAlertAction(title: "Установить из галереи",
-                                               style: .default,
-                                               handler: {[weak self] (_) in self?.pickImage(sourceType: .photoLibrary)})
-        let cameraAction = UIAlertAction(title: "Сделать фото",
-                                         style: .default,
-                                         handler: {[weak self] (_) in self?.pickImage(sourceType: .camera)})
+        let photoLibraryAction = UIAlertAction(title: "Установить из галереи", style: .default) { [weak self] _ in
+            self?.pickImage(sourceType: .photoLibrary)
+        }
+        let cameraAction = UIAlertAction(title: "Сделать фото", style: .default) { [weak self] (_) in
+            self?.pickImage(sourceType: .camera)
+        }
         controller.addAction(photoLibraryAction)
         controller.addAction(cameraAction)
         present(controller, animated: true)
-    }
-    
-    // MARK: - Initializers
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        // Ошибка. Ссылка на кнопку появится только после того как загрузится представление.
-        //print(editButton.frame)
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        // Ошибка. Ссылка на кнопку появится только после того как загрузится представление.
-        //print(editButton.frame)
     }
     
     // MARK: - Overrides
@@ -56,13 +37,6 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidLoad()
         profileImage.layer.cornerRadius = 48
         pickImageButton.layer.cornerRadius = 48
-        print(editButton.frame)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        // На данном этапе представлене уже добавлено в дерево (в отличие от viewDidLoad) и имеет актуальные размеры, которые могут отличаться размеров во время viewDidLoad. Т.к. размеры представления изменились, изменились и размеры кнопки.
-        print(editButton.frame)
     }
     
     // MARK: - Implementation of UIImagePickerControllerDelegate

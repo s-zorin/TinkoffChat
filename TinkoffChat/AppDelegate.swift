@@ -15,7 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let navigationController = UINavigationController()
+        let profileViewController = ProfileViewController()
+        navigationController.pushViewController(profileViewController, animated: true)
+        window = UIWindow()
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
         return true
     }
 
@@ -62,33 +67,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
-    }
-
-    // MARK: - Lifecycle Events
-    
-    lazy var logger = LifecycleEventLogger(entityName: "Application")
-    
-    func applicationWillResignActive(_ application: UIApplication) {
-        logger.logEvent(#function)
-    }
-    
-    func applicationWillTerminate(_ application: UIApplication) {
-        logger.logEvent(#function)
-    }
-    
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        logger.logEvent(#function)
-    }
-    
-    func applicationDidFinishLaunching(_ application: UIApplication) {
-        logger.logEvent(#function)
-    }
-    
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        logger.logEvent(#function)
-    }
-    
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        logger.logEvent(#function)
     }
 }

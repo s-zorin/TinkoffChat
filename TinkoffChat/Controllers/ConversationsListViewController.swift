@@ -9,12 +9,10 @@
 import UIKit
 
 class ConversationsListViewController: UIViewController, UITableViewDelegate {
-
-    
     
     // MARK: - Properties
     
-    let dataSource = FakeConversationsDataSource(onlineConversationsCount: 5, historyConversationsCount: 10)
+    let dataSource = FakeConversationsDataSource(onlineConversationsCount: 10, historyConversationsCount: 10)
     
     // MARK: - Outlets
     

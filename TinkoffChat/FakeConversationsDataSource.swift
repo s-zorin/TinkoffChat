@@ -15,8 +15,6 @@ import UIKit
     
     var onlineConversations: [ConversationCellModel] = []
     var historyConversations: [ConversationCellModel] = []
-    let dayDifference = [-5, -4, -3, -2, -1, 0]
-    let dateFormatter = DateFormatter()
     let chars = "abcdefghijklmnopqrstuvwxyz"
     
     // MARK: - Initializers
@@ -45,6 +43,19 @@ import UIKit
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ConversationTableViewCell.self), for: indexPath) as! ConversationTableViewCell
+        let model: ConversationCellModel? = {
+            switch indexPath.section {
+            case 0:
+                return onlineConversations[indexPath.row]
+            case 1:
+                return historyConversations[indexPath.row]
+            default:
+                return nil
+            }
+        }()
+        if let model = model {
+            cell.configure(with: model)
+        }
         return cell
     }
     
@@ -53,7 +64,7 @@ import UIKit
         case 0:
             return "Online"
         case 1:
-            return "Offline"
+            return "History"
         default:
             return nil
         }
@@ -75,18 +86,35 @@ import UIKit
     // MARK: - Private Methods
     
     private func generateConversation(isOnline: Bool) -> ConversationCellModel {
-        let name = generateString(length: 10)
-        let message = generateString(length: 30)
-        let date = Date()
-        let hasUnreadMessages = true
+        let name = generateString(length: Int.random(in: 2...10))
+        let message = Int.random(in: 0...5) == 0 ? nil : generateMessage(numberOfSentences: Int.random(in: 1...5))
+        let date = generateDate(addSeconds: Int.random(in: -60*60*48...0))
+        let hasUnreadMessages = message == nil ? false : Int.random(in: 0...1) == 0
         return ConversationCellModel(name: name, message: message, date: date, isOnline: isOnline, hasUnreadMessages: hasUnreadMessages)
     }
     
-    private func generateString(length: Int) -> String {
+    private func generateString(length: Int, firstLetterCapitalized: Bool = true) -> String {
         let randomChars = stride(from: 0, to: length, by: 1).map { i -> Character in
             let randomChar = chars.randomElement()!
-            return i == 0 ? Character(randomChar.uppercased()) : randomChar
+            return firstLetterCapitalized && i == 0 ? Character(randomChar.uppercased()) : randomChar
         }
         return String(randomChars)
+    }
+    
+    private func generateSentence(numberOfWords: Int) -> String {
+        let words = stride(from: 0, to: numberOfWords, by: 1).map { i in
+            generateString(length: Int.random(in: 1...12), firstLetterCapitalized: i == 0)
+        }.joined(separator: " ")
+        return "\(words)."
+    }
+    
+    private func generateMessage(numberOfSentences: Int) -> String {
+        stride(from: 0, to: numberOfSentences, by: 1).map { _ in
+            generateSentence(numberOfWords: Int.random(in: 2...6))
+        }.joined(separator: " ")
+    }
+    
+    private func generateDate(addSeconds seconds: Int) -> Date {
+        Calendar.current.date(byAdding: .second, value: seconds, to: Date()) ?? Date()
     }
 }

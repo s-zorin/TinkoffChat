@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let navigationController = UINavigationController()
-        let profileViewController = ProfileViewController()
-        navigationController.pushViewController(profileViewController, animated: true)
+        let conversationsListViewController = ConversationsListViewController()
+        navigationController.pushViewController(conversationsListViewController, animated: true)
         window = UIWindow()
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0196B2F240BC31A00AD3224 /* FakeConversationsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0196B2E240BC31A00AD3224 /* FakeConversationsDataSource.swift */; };
+		D0196B31240BC34600AD3224 /* ConversationCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0196B30240BC34600AD3224 /* ConversationCellModel.swift */; };
+		D048388D240958D300FC2D5C /* ConversationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D048388B240958D300FC2D5C /* ConversationsListViewController.swift */; };
+		D048388E240958D300FC2D5C /* ConversationsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D048388C240958D300FC2D5C /* ConversationsListViewController.xib */; };
+		D0483891240A7E7800FC2D5C /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D048388F240A7E7800FC2D5C /* ConversationTableViewCell.swift */; };
+		D0483892240A7E7800FC2D5C /* ConversationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0483890240A7E7800FC2D5C /* ConversationTableViewCell.xib */; };
 		D0544BCA240800410030448B /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0544BC9240800410030448B /* ProfileViewController.xib */; };
 		D0E5467723F8078E0058732D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5467623F8078E0058732D /* AppDelegate.swift */; };
 		D0E5468123F8078E0058732D /* TinkoffChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0E5467F23F8078E0058732D /* TinkoffChat.xcdatamodeld */; };
@@ -33,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D0196B2E240BC31A00AD3224 /* FakeConversationsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeConversationsDataSource.swift; sourceTree = "<group>"; };
+		D0196B30240BC34600AD3224 /* ConversationCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCellModel.swift; sourceTree = "<group>"; };
+		D048388B240958D300FC2D5C /* ConversationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsListViewController.swift; sourceTree = "<group>"; };
+		D048388C240958D300FC2D5C /* ConversationsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConversationsListViewController.xib; sourceTree = "<group>"; };
+		D048388F240A7E7800FC2D5C /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
+		D0483890240A7E7800FC2D5C /* ConversationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConversationTableViewCell.xib; sourceTree = "<group>"; };
 		D0544BC9240800410030448B /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		D0E5467323F8078E0058732D /* TinkoffChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E5467623F8078E0058732D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +116,8 @@
 				D0E5468723F8078E0058732D /* Info.plist */,
 				D0E546CE23F85A5C0058732D /* InfoLogs.plist */,
 				D0E5467F23F8078E0058732D /* TinkoffChat.xcdatamodeld */,
+				D0196B2E240BC31A00AD3224 /* FakeConversationsDataSource.swift */,
+				D0196B30240BC34600AD3224 /* ConversationCellModel.swift */,
 			);
 			path = TinkoffChat;
 			sourceTree = "<group>";
@@ -122,6 +136,8 @@
 			children = (
 				D0E546D323FED3830058732D /* ProfileViewController.swift */,
 				D0544BC9240800410030448B /* ProfileViewController.xib */,
+				D048388B240958D300FC2D5C /* ConversationsListViewController.swift */,
+				D048388C240958D300FC2D5C /* ConversationsListViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -130,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				D0F0417324000792000E71F3 /* RoundedButton.swift */,
+				D048388F240A7E7800FC2D5C /* ConversationTableViewCell.swift */,
+				D0483890240A7E7800FC2D5C /* ConversationTableViewCell.xib */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -233,7 +251,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0483892240A7E7800FC2D5C /* ConversationTableViewCell.xib in Resources */,
 				D0E5468623F8078E0058732D /* LaunchScreen.storyboard in Resources */,
+				D048388E240958D300FC2D5C /* ConversationsListViewController.xib in Resources */,
 				D0E5468323F8078E0058732D /* Assets.xcassets in Resources */,
 				D0544BCA240800410030448B /* ProfileViewController.xib in Resources */,
 			);
@@ -263,7 +283,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0E5468123F8078E0058732D /* TinkoffChat.xcdatamodeld in Sources */,
+				D048388D240958D300FC2D5C /* ConversationsListViewController.swift in Sources */,
+				D0196B31240BC34600AD3224 /* ConversationCellModel.swift in Sources */,
+				D0483891240A7E7800FC2D5C /* ConversationTableViewCell.swift in Sources */,
 				D0F0417424000792000E71F3 /* RoundedButton.swift in Sources */,
+				D0196B2F240BC31A00AD3224 /* FakeConversationsDataSource.swift in Sources */,
 				D0E546D423FED3830058732D /* ProfileViewController.swift in Sources */,
 				D0E5467723F8078E0058732D /* AppDelegate.swift in Sources */,
 			);

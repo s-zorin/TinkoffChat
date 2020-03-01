@@ -27,6 +27,12 @@
 		D0E546D423FED3830058732D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E546D323FED3830058732D /* ProfileViewController.swift */; };
 		D0E546DE23FFFD620058732D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E546D323FED3830058732D /* ProfileViewController.swift */; };
 		D0F0417424000792000E71F3 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0417324000792000E71F3 /* RoundedButton.swift */; };
+		D0F38EC2240C1C2400B7F298 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F38EC0240C1C2400B7F298 /* ConversationViewController.swift */; };
+		D0F38EC3240C1C2400B7F298 /* ConversationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F38EC1240C1C2400B7F298 /* ConversationViewController.xib */; };
+		D0F38EC6240C21AA00B7F298 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F38EC4240C21AA00B7F298 /* MessageTableViewCell.swift */; };
+		D0F38EC7240C21AA00B7F298 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F38EC5240C21AA00B7F298 /* MessageTableViewCell.xib */; };
+		D0F38EC9240C21D600B7F298 /* MessageCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F38EC8240C21D600B7F298 /* MessageCellModel.swift */; };
+		D0F38ECD240C25F300B7F298 /* TrashGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F38ECC240C25F300B7F298 /* TrashGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +67,12 @@
 		D0E546CE23F85A5C0058732D /* InfoLogs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = InfoLogs.plist; sourceTree = "<group>"; };
 		D0E546D323FED3830058732D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D0F0417324000792000E71F3 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		D0F38EC0240C1C2400B7F298 /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		D0F38EC1240C1C2400B7F298 /* ConversationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConversationViewController.xib; sourceTree = "<group>"; };
+		D0F38EC4240C21AA00B7F298 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		D0F38EC5240C21AA00B7F298 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
+		D0F38EC8240C21D600B7F298 /* MessageCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCellModel.swift; sourceTree = "<group>"; };
+		D0F38ECC240C25F300B7F298 /* TrashGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +133,8 @@
 				D0196B2E240BC31A00AD3224 /* FakeConversationsDataSource.swift */,
 				D0196B30240BC34600AD3224 /* ConversationCellModel.swift */,
 				D0196B32240BD5D400AD3224 /* ConfigurableViewProtocol.swift */,
+				D0F38EC8240C21D600B7F298 /* MessageCellModel.swift */,
+				D0F38ECC240C25F300B7F298 /* TrashGenerator.swift */,
 			);
 			path = TinkoffChat;
 			sourceTree = "<group>";
@@ -141,6 +155,8 @@
 				D0544BC9240800410030448B /* ProfileViewController.xib */,
 				D048388B240958D300FC2D5C /* ConversationsListViewController.swift */,
 				D048388C240958D300FC2D5C /* ConversationsListViewController.xib */,
+				D0F38EC0240C1C2400B7F298 /* ConversationViewController.swift */,
+				D0F38EC1240C1C2400B7F298 /* ConversationViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -151,6 +167,8 @@
 				D0F0417324000792000E71F3 /* RoundedButton.swift */,
 				D048388F240A7E7800FC2D5C /* ConversationTableViewCell.swift */,
 				D0483890240A7E7800FC2D5C /* ConversationTableViewCell.xib */,
+				D0F38EC4240C21AA00B7F298 /* MessageTableViewCell.swift */,
+				D0F38EC5240C21AA00B7F298 /* MessageTableViewCell.xib */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -257,7 +275,9 @@
 				D0483892240A7E7800FC2D5C /* ConversationTableViewCell.xib in Resources */,
 				D0E5468623F8078E0058732D /* LaunchScreen.storyboard in Resources */,
 				D048388E240958D300FC2D5C /* ConversationsListViewController.xib in Resources */,
+				D0F38EC3240C1C2400B7F298 /* ConversationViewController.xib in Resources */,
 				D0E5468323F8078E0058732D /* Assets.xcassets in Resources */,
+				D0F38EC7240C21AA00B7F298 /* MessageTableViewCell.xib in Resources */,
 				D0544BCA240800410030448B /* ProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,7 +307,11 @@
 			files = (
 				D0E5468123F8078E0058732D /* TinkoffChat.xcdatamodeld in Sources */,
 				D048388D240958D300FC2D5C /* ConversationsListViewController.swift in Sources */,
+				D0F38EC2240C1C2400B7F298 /* ConversationViewController.swift in Sources */,
+				D0F38EC9240C21D600B7F298 /* MessageCellModel.swift in Sources */,
+				D0F38ECD240C25F300B7F298 /* TrashGenerator.swift in Sources */,
 				D0196B31240BC34600AD3224 /* ConversationCellModel.swift in Sources */,
+				D0F38EC6240C21AA00B7F298 /* MessageTableViewCell.swift in Sources */,
 				D0483891240A7E7800FC2D5C /* ConversationTableViewCell.swift in Sources */,
 				D0196B33240BD5D400AD3224 /* ConfigurableViewProtocol.swift in Sources */,
 				D0F0417424000792000E71F3 /* RoundedButton.swift in Sources */,

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MessageTableViewCell" customModule="TinkoffChat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ge-pE-Wvi">
+                        <rect key="frame" x="8" y="8" width="304" height="28"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label Label " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3E-tv-Vm4">
+                                <rect key="frame" x="0.0" y="0.0" width="229" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="G3E-tv-Vm4" secondAttribute="bottom" id="190-dc-LW5"/>
+                            <constraint firstItem="G3E-tv-Vm4" firstAttribute="width" secondItem="6ge-pE-Wvi" secondAttribute="width" multiplier="0.75" constant="1" id="Bu1-H5-sdN"/>
+                            <constraint firstItem="G3E-tv-Vm4" firstAttribute="leading" secondItem="6ge-pE-Wvi" secondAttribute="leading" id="EHv-iH-ewQ"/>
+                            <constraint firstItem="G3E-tv-Vm4" firstAttribute="top" secondItem="6ge-pE-Wvi" secondAttribute="top" id="Erp-7S-ugl"/>
+                            <constraint firstAttribute="trailing" secondItem="G3E-tv-Vm4" secondAttribute="trailing" priority="999" id="wXG-GP-d4b"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6ge-pE-Wvi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="26h-ow-xvP"/>
+                    <constraint firstAttribute="trailing" secondItem="6ge-pE-Wvi" secondAttribute="trailing" constant="8" id="Eln-so-MNh"/>
+                    <constraint firstAttribute="bottom" secondItem="6ge-pE-Wvi" secondAttribute="bottom" constant="8" id="QkO-Cs-Qt5"/>
+                    <constraint firstItem="6ge-pE-Wvi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="cG7-rl-5ol"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="leadingConstraint" destination="EHv-iH-ewQ" id="7pQ-E8-Md5"/>
+                <outlet property="messageLabel" destination="G3E-tv-Vm4" id="g31-F3-yZK"/>
+                <outlet property="trailingConstraint" destination="wXG-GP-d4b" id="6tr-NI-m2W"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="145"/>
+        </tableViewCell>
+    </objects>
+</document>

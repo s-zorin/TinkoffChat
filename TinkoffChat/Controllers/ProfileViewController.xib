@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="TinkoffChat" customModuleProvider="target">
             <connections>
+                <outlet property="nameLabel" destination="6BC-Wb-xI5" id="5cE-Yt-FDp"/>
                 <outlet property="pickImageButton" destination="0M3-ZD-LR1" id="jXE-FJ-fU9"/>
                 <outlet property="profileImage" destination="PK5-DV-7fw" id="CPw-hH-1YG"/>
                 <outlet property="view" destination="iN0-l3-epB" id="pwW-My-2Dl"/>

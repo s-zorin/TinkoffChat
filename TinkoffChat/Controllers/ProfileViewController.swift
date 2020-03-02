@@ -8,12 +8,19 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ConfigurableViewProtocol {
+    
+    typealias ConfigurationModel = ConversationCellModel
+    
+    // MARK: - Properties
+    
+    private var configurationModel: ConfigurationModel?
 
     // MARK: - Outlets
     
     @IBOutlet private var profileImage: UIImageView!
     @IBOutlet private var pickImageButton: UIButton!
+    @IBOutlet private var nameLabel: UILabel!
     
     // MARK: - Actions
     
@@ -37,6 +44,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidLoad()
         profileImage.layer.cornerRadius = 48
         pickImageButton.layer.cornerRadius = 48
+        applyConfiguration()
     }
     
     // MARK: - Implementation of UIImagePickerControllerDelegate
@@ -44,6 +52,13 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
         profileImage.image = info[.originalImage] as? UIImage
+    }
+    
+    // MARK: - Implementation of ConfigurableViewProtocol
+    
+    func configure(with model: ConversationCellModel) {
+        configurationModel = model
+        applyConfiguration()
     }
     
     // MARK: - Private Methods
@@ -56,5 +71,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             imagePickerController.allowsEditing = false
             present(imagePickerController, animated: true)
         }
+    }
+    
+    private func applyConfiguration() {
+        nameLabel?.text = configurationModel?.name
     }
 }

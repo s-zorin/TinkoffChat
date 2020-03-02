@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConversationsListViewController" customModule="TinkoffChat" customModuleProvider="target">
             <connections>
+                <outlet property="statusLabel" destination="x9e-dg-2TU" id="SkH-bz-uLc"/>
                 <outlet property="tableView" destination="9uX-nT-0Oc" id="uo7-QU-chd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,20 +20,57 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Cb-sS-MoB">
+                    <rect key="frame" x="0.0" y="44" width="414" height="72"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9e-dg-2TU">
+                            <rect key="frame" x="165.5" y="18" width="83" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3l-0z-32q" userLabel="Profile Button">
+                            <rect key="frame" x="342" y="0.0" width="72" height="72"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="X3l-0z-32q" secondAttribute="height" multiplier="1:1" id="Zah-18-HHv"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="placeholder-user"/>
+                            <connections>
+                                <action selector="openProfile:" destination="-1" eventType="touchUpInside" id="eTw-91-Xwu"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="X3l-0z-32q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="x9e-dg-2TU" secondAttribute="trailing" constant="4" id="Dcb-Wc-rBF"/>
+                        <constraint firstItem="X3l-0z-32q" firstAttribute="height" secondItem="9Cb-sS-MoB" secondAttribute="height" id="Kjx-pv-amx"/>
+                        <constraint firstItem="x9e-dg-2TU" firstAttribute="centerX" secondItem="9Cb-sS-MoB" secondAttribute="centerX" id="MUm-xK-A8J"/>
+                        <constraint firstAttribute="trailing" secondItem="X3l-0z-32q" secondAttribute="trailing" id="VuP-D3-hF9"/>
+                        <constraint firstItem="x9e-dg-2TU" firstAttribute="centerY" secondItem="9Cb-sS-MoB" secondAttribute="centerY" id="mg9-x7-6Xp"/>
+                        <constraint firstAttribute="height" constant="72" id="ny6-Ni-FBI"/>
+                        <constraint firstItem="X3l-0z-32q" firstAttribute="centerY" secondItem="9Cb-sS-MoB" secondAttribute="centerY" id="uiU-mI-cNl"/>
+                    </constraints>
+                </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="9uX-nT-0Oc">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="116" width="414" height="746"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="9uX-nT-0Oc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4ZP-CZ-TJ5"/>
+                <constraint firstItem="9uX-nT-0Oc" firstAttribute="top" secondItem="9Cb-sS-MoB" secondAttribute="bottom" id="C99-Pw-pKI"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9uX-nT-0Oc" secondAttribute="trailing" id="No5-ZC-iDQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9Cb-sS-MoB" secondAttribute="trailing" id="azn-Mc-PeJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9uX-nT-0Oc" secondAttribute="bottom" id="d8R-Oj-bCz"/>
-                <constraint firstItem="9uX-nT-0Oc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="mEr-Ja-ipq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="9Cb-sS-MoB" secondAttribute="leading" id="krL-OQ-qRs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="9Cb-sS-MoB" secondAttribute="top" id="uV7-Ue-U4U"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="113" y="141"/>
         </view>
     </objects>
+    <resources>
+        <image name="placeholder-user" width="600" height="600"/>
+    </resources>
 </document>

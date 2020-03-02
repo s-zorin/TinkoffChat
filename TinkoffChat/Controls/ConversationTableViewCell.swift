@@ -25,12 +25,19 @@ final class ConversationTableViewCell: UITableViewCell, ConfigurableViewProtocol
         return dateFormatter
     }()
     private var configurationModel: ConfigurationModel?
+    var startConversation: ((_ model: ConfigurationModel?) -> Void)?
     
     // MARK: - Outlets
     
     @IBOutlet private var nameLabel: UILabel!
     @IBOutlet private var dateLabel: UILabel!
     @IBOutlet private var messageLabel: UILabel!
+    
+    // MARK: - Actions
+    
+    @IBAction func startConversation(_ sender: UIButton) {
+        startConversation?(configurationModel)
+    }
     
     // MARK: - Overrides
     

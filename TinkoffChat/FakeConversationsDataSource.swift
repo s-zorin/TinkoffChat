@@ -53,9 +53,10 @@ final class FakeConversationsDataSource: NSObject, UITableViewDataSource {
     
     // MARK: - Properties
     
+    private let trashGenerator = TrashGeneator()
     var onlineConversations: [ConversationCellModel] = []
     var historyConversations: [ConversationCellModel] = []
-    private let trashGenerator = TrashGeneator()
+    var startConversation: ((_ model: ConversationCellModel?) -> Void)?
     
     // MARK: - Initializers
     
@@ -111,6 +112,7 @@ final class FakeConversationsDataSource: NSObject, UITableViewDataSource {
         if let model = model {
             cell.configure(with: model)
         }
+        cell.startConversation = startConversation
         return cell
     }
     

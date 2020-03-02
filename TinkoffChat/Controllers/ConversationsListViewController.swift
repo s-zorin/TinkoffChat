@@ -12,7 +12,17 @@ class ConversationsListViewController: UIViewController, UITableViewDelegate {
     
     // MARK: - Properties
     
-    let dataSource = FakeConversationsDataSource(numberOfOnlineConversations: 10, numberOfHistoryConversations: 10)
+    private lazy var dataSource: FakeConversationsDataSource! = {
+        let dataSource = FakeConversationsDataSource(numberOfOnlineConversations: 10, numberOfHistoryConversations: 10)
+        dataSource.startConversation = { [weak self] model in
+            let conversationViewController = ConversationViewController()
+            if let model = model {
+                conversationViewController.configure(with: model)
+            }
+            self?.navigationController?.pushViewController(conversationViewController, animated: true)
+        }
+        return dataSource
+    }()
     
     // MARK: - Outlets
     
@@ -33,13 +43,11 @@ class ConversationsListViewController: UIViewController, UITableViewDelegate {
     }
     
     // MARK: - Implementation of UITableViewDelegate
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // TODO: Show user.
+        
         tableView.selectRow(at: nil, animated: false, scrollPosition: .none)
-        let conversationViewController = ConversationViewController()
-        if let model = dataSource[indexPath] {
-            conversationViewController.configure(with: model)
-        }
-        navigationController?.pushViewController(conversationViewController, animated: true)
     }
 }

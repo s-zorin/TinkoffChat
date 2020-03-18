@@ -54,6 +54,7 @@
 		D048388F240A7E7800FC2D5C /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
 		D0483890240A7E7800FC2D5C /* ConversationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConversationTableViewCell.xib; sourceTree = "<group>"; };
 		D0544BC9240800410030448B /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		D06F9E962413A7B100C4C414 /* ITCompany.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ITCompany.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D0E5467323F8078E0058732D /* TinkoffChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E5467623F8078E0058732D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0E5468023F8078E0058732D /* TinkoffChat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TinkoffChat.xcdatamodel; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 		D0E5466A23F8078E0058732D = {
 			isa = PBXGroup;
 			children = (
+				D06F9E962413A7B100C4C414 /* ITCompany.playground */,
 				D0E5467523F8078E0058732D /* TinkoffChat */,
 				D0E5468F23F8078F0058732D /* TinkoffChatTests */,
 				D0E5467423F8078E0058732D /* Products */,

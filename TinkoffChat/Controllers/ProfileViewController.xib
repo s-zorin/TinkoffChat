@@ -10,9 +10,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="TinkoffChat" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="MTN-fI-PL0" id="cn2-lH-rCt"/>
+                <outlet property="bioLabel" destination="ujy-2M-t7W" id="6AN-G2-vjL"/>
+                <outlet property="bioTextField" destination="efM-DS-cfY" id="nDN-6Q-uth"/>
+                <outlet property="editButton" destination="USv-Mk-rjO" id="Zs2-Pw-yJc"/>
                 <outlet property="nameLabel" destination="6BC-Wb-xI5" id="5cE-Yt-FDp"/>
+                <outlet property="nameTextField" destination="3Tu-Dy-lkt" id="3nO-6d-7Qe"/>
                 <outlet property="pickImageButton" destination="0M3-ZD-LR1" id="jXE-FJ-fU9"/>
                 <outlet property="profileImage" destination="PK5-DV-7fw" id="CPw-hH-1YG"/>
+                <outlet property="saveGCDButton" destination="exd-sJ-IxN" id="riY-VZ-OqI"/>
+                <outlet property="saveOperationButton" destination="eLs-Sx-LQH" id="x1C-Jf-kKl"/>
                 <outlet property="view" destination="iN0-l3-epB" id="pwW-My-2Dl"/>
             </connections>
         </placeholder>
@@ -25,7 +32,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N74-V5-Bci">
-                            <rect key="frame" x="16" y="16" width="382" height="518.5"/>
+                            <rect key="frame" x="16" y="16" width="382" height="540"/>
                             <subviews>
                                 <view contentMode="scaleToFill" id="eED-Lk-61I">
                                     <rect key="frame" x="0.0" y="0.0" width="382" height="382"/>
@@ -62,30 +69,58 @@
                                         <constraint firstAttribute="trailing" secondItem="0M3-ZD-LR1" secondAttribute="trailing" id="p68-VP-Pf0"/>
                                     </constraints>
                                 </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USv-Mk-rjO" userLabel="Edit Button">
+                                    <rect key="frame" x="0.0" y="390" width="382" height="30"/>
+                                    <state key="normal" title="Редактировать"/>
+                                    <connections>
+                                        <action selector="edit:" destination="-1" eventType="touchUpInside" id="G7T-gO-6gG"/>
+                                    </connections>
+                                </button>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exd-sJ-IxN" userLabel="Save GCD Button">
+                                    <rect key="frame" x="0.0" y="424" width="382" height="0.0"/>
+                                    <state key="normal" title="Сохранить используя GCD"/>
+                                    <connections>
+                                        <action selector="saveGCD:" destination="-1" eventType="touchUpInside" id="yf8-dT-sHN"/>
+                                    </connections>
+                                </button>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLs-Sx-LQH" userLabel="Save Operation Button">
+                                    <rect key="frame" x="0.0" y="424" width="382" height="0.0"/>
+                                    <state key="normal" title="Сохранить используя Operation"/>
+                                    <connections>
+                                        <action selector="saveOperation:" destination="-1" eventType="touchUpInside" id="rKg-jE-idl"/>
+                                    </connections>
+                                </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Александр Федоров" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6BC-Wb-xI5">
-                                    <rect key="frame" x="0.0" y="390" width="382" height="43"/>
+                                    <rect key="frame" x="0.0" y="428" width="382" height="43"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1️⃣ Люблю программировать под iOS " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujy-2M-t7W">
-                                    <rect key="frame" x="0.0" y="441" width="382" height="20.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1️⃣ Люблю программировать под iOS 2️⃣ Изучать новые технологии 3️⃣ Помогаю развиваться другим" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujy-2M-t7W">
+                                    <rect key="frame" x="0.0" y="479" width="382" height="61"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2️⃣ Изучать новые технологии" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbx-G1-ukH">
-                                    <rect key="frame" x="0.0" y="469.5" width="382" height="20.5"/>
+                                <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Tu-Dy-lkt" userLabel="Name Text Field">
+                                    <rect key="frame" x="0.0" y="540" width="382" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
+                                    <connections>
+                                        <action selector="nameChanged:" destination="-1" eventType="editingChanged" id="6wy-6e-MBB"/>
+                                    </connections>
+                                </textField>
+                                <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="efM-DS-cfY" userLabel="Bio Text Field">
+                                    <rect key="frame" x="0.0" y="540" width="382" height="0.0"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3️⃣ Помогаю развиваться другим" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0U-Zq-o54">
-                                    <rect key="frame" x="0.0" y="498" width="382" height="20.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <action selector="bioChanged:" destination="-1" eventType="editingChanged" id="Hjf-o7-zQz"/>
+                                    </connections>
+                                </textField>
+                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="MTN-fI-PL0" userLabel="Activity Indicator">
+                                    <rect key="frame" x="0.0" y="540" width="382" height="0.0"/>
+                                </activityIndicatorView>
                             </subviews>
                         </stackView>
                     </subviews>

@@ -9,7 +9,9 @@
 import Foundation
 
 struct ConversationCellModel {
+    let id: String
     let name: String
+    let bio: String
     let message: String?
     let date: Date
     let isOnline: Bool

@@ -143,10 +143,19 @@ final class FakeConversationsDataSource: NSObject, UITableViewDataSource {
     // MARK: - Private Methods
     
     private func generateConversation(isOnline: Bool) -> ConversationCellModel {
+        let id = UUID().uuidString
         let name = trashGenerator.generateString(length: Int.random(in: 2...10))
+        let bio = trashGenerator.generateMessage(numberOfSentences: Int.random(in: 1...2))
         let message = Int.random(in: 0...5) == 0 ? nil : trashGenerator.generateMessage(numberOfSentences: Int.random(in: 1...5))
         let date = trashGenerator.generateDate(addSeconds: Int.random(in: -60*60*48...0))
         let hasUnreadMessages = message == nil ? false : Int.random(in: 0...1) == 0
-        return ConversationCellModel(name: name, message: message, date: date, isOnline: isOnline, hasUnreadMessages: hasUnreadMessages)
+        return ConversationCellModel(
+            id: id,
+            name: name,
+            bio: bio,
+            message: message,
+            date: date,
+            isOnline: isOnline,
+            hasUnreadMessages: hasUnreadMessages)
     }
 }
